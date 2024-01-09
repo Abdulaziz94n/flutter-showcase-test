@@ -16,10 +16,6 @@ class LogInUseCase {
     required String username,
     required String password,
   }) async {
-    if (username.isEmpty || password.isEmpty) {
-      return failure(const LogInFailure.missingCredentials());
-    }
-
     if (!isUnitTests) {
       //TODO simulation of network request
       //ignore: no-magic-number
