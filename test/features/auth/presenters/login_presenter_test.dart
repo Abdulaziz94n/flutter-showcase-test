@@ -20,6 +20,7 @@ void main() {
   setUp(() {
     model = LoginPresentationModel.initial(const LoginInitialParams());
     navigator = MockLoginNavigator();
+
     presenter = LoginPresenter(
       model,
       navigator,
